@@ -1,5 +1,6 @@
 var answer = "test";
 var guesses = 0;
+var attempts = [];
 var live;
 var progress = ["_", "_", "_", "_"];
 
@@ -13,11 +14,13 @@ document.addEventListener("keyup", function(e){
     console.log(pressed);
     
     
+    
     var letterIndex = answer.indexOf(pressed);
     console.log(letterIndex);
 
     
-    if(answer.indexOf(pressed) < 0){
+    if((answer.indexOf(pressed) < 0) && (attempts.indexOf(pressed) < 0)){
+        attempts.push(pressed);
         guesses++;
     } else{
         console.log("Yes!");
@@ -31,7 +34,7 @@ document.addEventListener("keyup", function(e){
         }
     }
     document.getElementById("gameDisplay").innerHTML = progress.join(" ");
-    console.log(guesses);
+    console.log(attempts);
 });
 
 
