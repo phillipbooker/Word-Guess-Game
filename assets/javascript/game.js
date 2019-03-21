@@ -1,14 +1,13 @@
 var answer = "test";
 var guesses = 0;
 var attempts = [];
-var live;
+var win = 0;
 var progress = ["_", "_", "_", "_"];
 
 
 
 document.addEventListener("keyup", function(e){
     // console.log(e);
-    var answerIndex;
 
     var pressed = e.key;
     console.log(pressed);
@@ -19,8 +18,9 @@ document.addEventListener("keyup", function(e){
     console.log(letterIndex);
 
     
-    if((answer.indexOf(pressed) < 0) && (attempts.indexOf(pressed) < 0)){
+    if((win == 0) && (answer.indexOf(pressed) < 0) && (attempts.indexOf(pressed) < 0)){
         attempts.push(pressed);
+        // console.log("Live: " + live);
         guesses++;
     } else{
         console.log("Yes!");
@@ -30,11 +30,17 @@ document.addEventListener("keyup", function(e){
             if(answer.charAt(i) == pressed){
                 progress[i] = pressed;
             }
-            //alert(str.charAt(i));
         }
     }
     document.getElementById("gameDisplay").innerHTML = progress.join(" ");
     console.log(attempts);
+
+    if (progress.indexOf("_") < 0){
+        win = 1;
+        document.getElementById("gameWin").innerHTML = "You win!";
+    };
+    //Check to see if "_" is still in progress
+
 });
 
 
