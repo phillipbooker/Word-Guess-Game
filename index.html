@@ -2,13 +2,32 @@
 <html>
     <head>
         <title>Hangman!</title>
-        <link rel="stylesheet" href="assets/css/reset.css">
+        <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+        <!-- External bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
         <main>
-            <p id="gameDisplay">Yo!</p>
-            <p id="gameWin"></p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p id="gameDisplay">Press any key to start!</p>
+                        <p id="gameWin"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <p id="gameAttempts"></p>
+                        </div>
+                        <div class="row">
+                            <p id="gameGuesses"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
         </main>
         <script src="assets/javascript/game.js"></script>
     </body>
