@@ -19,7 +19,7 @@ function shuffle(array) {
 }
 
 
-var bank = ["hair", "goose", "berry", "apple", "pies"];
+var bank = ["warriors", "court", "referee", "foul", "assist", "rebound", "lakers", "thunder", "dunk", "dribble", "crossover"];
 bank = shuffle(bank);
 console.log(bank);
 //var answer = "test";
@@ -40,6 +40,7 @@ for (var i = 0; i < answer.length; i++){
 
 document.getElementById("gameDisplay").innerHTML = progress.join(" ");
 document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
+document.getElementById("gameScore").innerHTML = "Score: " + score;
 
 
 
@@ -66,7 +67,7 @@ document.addEventListener("keyup", function(e){
             }
     
             console.log("New answer is: " + answer);
-            document.getElementById("gameWin").innerHTML = "";
+            document.getElementById("gameResult").innerHTML = "";
             document.getElementById("gameHint").innerHTML = "Guess a letter with the keyboard!";
     
             
@@ -95,7 +96,7 @@ document.addEventListener("keyup", function(e){
             //Game is won
             if (progress.indexOf("_") < 0){
                 win = 1;
-                document.getElementById("gameWin").innerHTML = "You guessed it! (Press any key to continue!)";
+                document.getElementById("gameResult").innerHTML = "You guessed it! (Press any key to continue!)";
                 score++;
                 bankIndex++;
                 //answer = bank[bank.indexOf(answer) + 1];
@@ -108,16 +109,17 @@ document.addEventListener("keyup", function(e){
         document.getElementById("gameDisplay").innerHTML = progress.join(" ");
         document.getElementById("gameAttempts").innerHTML = attempts.join(", ");
         document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
+        document.getElementById("gameScore").innerHTML = "Score: " + score;
         // console.log(attempts);
         if(guesses == 0){
             done = 1;
-            document.getElementById("gameWin").innerHTML = "You lost.... :(";
+            document.getElementById("gameResult").innerHTML = "You lost.... :(";
             document.getElementById("gameHint").innerHTML = "Refresh to play again!";
         }
 
         if(bankIndex == bank.length){
             done = 1;
-            document.getElementById("gameWin").innerHTML = "You won the game!";
+            document.getElementById("gameResult").innerHTML = "You won the game!";
             document.getElementById("gameHint").innerHTML = "Refresh to play again!";
         }
     }
