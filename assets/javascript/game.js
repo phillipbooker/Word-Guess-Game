@@ -26,7 +26,7 @@ console.log(bank);
 //var answer = bank[Math.floor(Math.random() * bank.length)];
 var bankIndex = 0;
 var answer = bank[bankIndex];
-var guesses = 0;
+var guesses = 15;
 var attempts = [];
 var win = 0;
 var score = 0;
@@ -39,6 +39,7 @@ for (var i = 0; i < answer.length; i++){
 }
 
 document.getElementById("gameDisplay").innerHTML = progress.join(" ");
+document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
 
 
 
@@ -56,7 +57,7 @@ document.addEventListener("keyup", function(e){
         if(win == 1 && done != 1){
             //Choose new word and reinitialize game variables
             win = 0;
-            guesses = 0;
+            guesses = 15;
             attempts = [];
             progress = [];
             answer = bank[bankIndex];
@@ -66,6 +67,7 @@ document.addEventListener("keyup", function(e){
     
             console.log("New answer is: " + answer);
             document.getElementById("gameWin").innerHTML = "";
+            document.getElementById("gameHint").innerHTML = "Guess a letter with the keyboard!";
     
             
         } else if (!done){
@@ -78,7 +80,7 @@ document.addEventListener("keyup", function(e){
     
             if((done == 0) && (answer.indexOf(pressed) < 0) && (attempts.indexOf(pressed) < 0)){
                 attempts.push(pressed);
-                guesses++;
+                guesses--;
             } else{
                 console.log("Yes!");
                 progress[letterIndex] = answer[letterIndex];
@@ -107,7 +109,12 @@ document.addEventListener("keyup", function(e){
         document.getElementById("gameAttempts").innerHTML = attempts.join(", ");
         document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
         // console.log(attempts);
-    
+        if(guesses == 0){
+            done = 1;
+            document.getElementById("gameWin").innerHTML = "You lost.... :(";
+            document.getElementById("gameHint").innerHTML = "Refresh to play again!";
+        }
+
         if(bankIndex == bank.length){
             done = 1;
             document.getElementById("gameWin").innerHTML = "You won the game!";
