@@ -54,7 +54,7 @@ Choose a new word once player wins
 
 
 document.addEventListener("keyup", function(e){
-    if((e.which >= 65) && (e.which <= 90)){
+    if(win == 1 || ((e.which >= 65) && (e.which <= 90))){
         if(win == 1 && done != 1){
             //Choose new word and reinitialize game variables
             win = 0;
