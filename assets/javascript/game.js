@@ -41,6 +41,7 @@ for (var i = 0; i < answer.length; i++){
 document.getElementById("gameDisplay").innerHTML = progress.join(" ");
 document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
 document.getElementById("gameScore").innerHTML = "Score: " + score;
+document.getElementById("gameAttempts").innerHTML ="Attempts: " + attempts.join(", ");
 
 
 
@@ -107,7 +108,7 @@ document.addEventListener("keyup", function(e){
         
     
         document.getElementById("gameDisplay").innerHTML = progress.join(" ");
-        document.getElementById("gameAttempts").innerHTML = attempts.join(", ");
+        document.getElementById("gameAttempts").innerHTML ="Attempts: " + attempts.join(", ");
         document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
         document.getElementById("gameScore").innerHTML = "Score: " + score;
         // console.log(attempts);
