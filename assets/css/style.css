@@ -9,16 +9,25 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
+    border: solid 3px black;
+    border-radius: 25px;
 }
 
 body{
     color: white;
     background-image: url("../images/background.jpg") ;
     background-size: 100%;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h1{
+    font-size: 48px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 p{
-    /* border: solid 1px black; */
+    font-size: 25px;
 }
 
 .pillar{
@@ -28,4 +37,8 @@ p{
     padding-top: 100px;
     padding-bottom: 100px;
     margin: 0 15px 0 15px;
+}
+
+#gameResult{
+    height: 50px;
 }
