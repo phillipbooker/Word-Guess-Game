@@ -30,6 +30,10 @@ p{
     font-size: 25px;
 }
 
+.danger{
+    color: red;
+}
+
 .pillar{
     border: solid 2px white;
     border-radius: 10px;

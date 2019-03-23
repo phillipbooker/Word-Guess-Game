@@ -111,8 +111,13 @@ document.addEventListener("keyup", function(e){
         document.getElementById("gameHint").innerHTML = "Guess a letter with the keyboard!";
         document.getElementById("gameDisplay").innerHTML = progress.join(" ");
         document.getElementById("gameAttempts").innerHTML = attempts.join(", ");
-        document.getElementById("gameGuesses").innerHTML = guesses;
         document.getElementById("gameScore").innerHTML = score;
+        if(guesses <= 5){
+            document.getElementById("gameGuesses").innerHTML = "<span class='danger'>" + guesses + "</span>";
+        } else{
+            document.getElementById("gameGuesses").innerHTML = guesses;
+        }
+        
         // console.log(attempts);
         if(guesses == 0){
             done = 1;
