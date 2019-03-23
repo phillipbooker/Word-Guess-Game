@@ -39,9 +39,9 @@ for (var i = 0; i < answer.length; i++){
 }
 
 document.getElementById("gameDisplay").innerHTML = progress.join(" ");
-document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
-document.getElementById("gameScore").innerHTML = "Score: " + score;
-document.getElementById("gameAttempts").innerHTML ="Attempts: " + attempts.join(", ");
+document.getElementById("gameGuesses").innerHTML = guesses;
+document.getElementById("gameScore").innerHTML = score;
+document.getElementById("gameAttempts").innerHTML = attempts.join(", ");
 
 
 
@@ -110,9 +110,9 @@ document.addEventListener("keyup", function(e){
         
         document.getElementById("gameHint").innerHTML = "Guess a letter with the keyboard!";
         document.getElementById("gameDisplay").innerHTML = progress.join(" ");
-        document.getElementById("gameAttempts").innerHTML ="Attempts: " + attempts.join(", ");
-        document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;
-        document.getElementById("gameScore").innerHTML = "Score: " + score;
+        document.getElementById("gameAttempts").innerHTML = attempts.join(", ");
+        document.getElementById("gameGuesses").innerHTML = guesses;
+        document.getElementById("gameScore").innerHTML = score;
         // console.log(attempts);
         if(guesses == 0){
             done = 1;
