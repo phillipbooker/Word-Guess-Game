@@ -70,6 +70,7 @@ document.addEventListener("keyup", function(e){
             console.log("New answer is: " + answer);
             document.getElementById("gameResult").innerHTML = "";
             document.getElementById("gameHint").innerHTML = "Guess a letter with the keyboard!";
+            document.getElementById("answer-pic").src="assets/images/static.jpg";
     
             
         } else if (!done){
@@ -98,6 +99,7 @@ document.addEventListener("keyup", function(e){
             if (progress.indexOf("_") < 0){
                 win = 1;
                 document.getElementById("gameResult").innerHTML = "You guessed it! (Press any key to continue!)";
+                document.getElementById("answer-pic").src="assets/images/" + answer + ".jpg";
                 score++;
                 bankIndex++;
                 //answer = bank[bank.indexOf(answer) + 1];
@@ -106,7 +108,7 @@ document.addEventListener("keyup", function(e){
         }
     
         
-    
+        document.getElementById("gameHint").innerHTML = "Guess a letter with the keyboard!";
         document.getElementById("gameDisplay").innerHTML = progress.join(" ");
         document.getElementById("gameAttempts").innerHTML ="Attempts: " + attempts.join(", ");
         document.getElementById("gameGuesses").innerHTML = "Guesses: " + guesses;

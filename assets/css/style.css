@@ -1,0 +1,31 @@
+
+.answer-box{
+    width: 200px;
+    height: 200px;
+    padding: 0;
+}
+
+#answer-pic{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+body{
+    color: white;
+    background-image: url("../images/background.jpg") ;
+    background-size: 100%;
+}
+
+p{
+    /* border: solid 1px black; */
+}
+
+.pillar{
+    border: solid 2px white;
+    border-radius: 10px;
+    background-color: rgba(90, 86, 86, 0.7);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 15px 0 15px;
+}
