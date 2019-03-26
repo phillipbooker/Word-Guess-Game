@@ -9,7 +9,7 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border: solid 3px black;
+    border: solid 2px black;
     border-radius: 25px;
 }
 
@@ -19,6 +19,13 @@ body{
     background-size: 100%;
     font-family: 'Permanent Marker', cursive;
 }
+
+/* #main-div{
+    color: white;
+    background-image: url("../images/background.jpg") ;
+    background-size: 100%;
+    font-family: 'Permanent Marker', cursive;
+} */
 
 h1{
     font-size: 48px;
@@ -35,7 +42,7 @@ p{
 }
 
 .pillar{
-    border: solid 2px white;
+    border: solid 1px white;
     border-radius: 10px;
     background-color: rgba(90, 86, 86, 0.7);
     padding-top: 100px;
