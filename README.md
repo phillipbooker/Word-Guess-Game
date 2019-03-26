@@ -2,7 +2,7 @@
 
 This is a simple Hangman game! The theme is basketball!
 
-##Instructions
+## Instructions
 
 Press any letter key to guess and start the game.
 
@@ -14,5 +14,5 @@ Try to guess them all!
 
 Hint: Remember... Think Basketball!!!
 
-###Technologies
+### Technologies
 HTML, JavaScript, CSS, Bootstrap
